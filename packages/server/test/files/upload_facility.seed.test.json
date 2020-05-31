@@ -1,0 +1,93 @@
+[
+  {
+    "emr": "IQCare",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "A12181C9-790D-452C-B3FC-C99630AD25B6",
+    "code": -10112680,
+    "name": "Aberdare Health Centre",
+    "created": "2020-05-30 00:45:54.653",
+    "snapshotDate": "2020-05-30 00:52:23.740",
+    "snapshotSiteCode": 12680,
+    "snapshotVersion": 1
+  },
+  {
+    "emr": "KenyaEMR",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "41FB6E1C-F5FE-4805-8F87-0F4190A1AEF2",
+    "code": 12680,
+    "name": "Aberdare Health Centre",
+    "created": "2020-05-30 00:52:23.743",
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "emr": "IQCare",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "AC7DB63A-D0F8-42B0-BD9A-096A08FC07F6",
+    "code": -10112692,
+    "name": "Leo Health Centre",
+    "created": "2020-05-30 00:45:54.653",
+    "snapshotDate": "2020-05-30 00:52:23.740",
+    "snapshotSiteCode": 12692,
+    "snapshotVersion": 1
+  },
+  {
+    "emr": "KenyaEMR",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "4C97E6EB-85C2-4BB2-8AD8-1C8CE9DE9D64",
+    "code": 12692,
+    "name": "Leo Health Centre",
+    "created": "2020-05-30 00:52:23.743",
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "emr": "KenyaEMR",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "BE8080D1-6DE2-4292-A6AA-F4271ABAB513",
+    "code": 12690,
+    "name": "Mgs Health Centre",
+    "created": "2020-05-30 00:52:23.743",
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "emr": "IQCare",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "2EE2EA3B-3B45-42C8-8DCA-410FB776B94E",
+    "code": 12691,
+    "name": "Afya Health Centre",
+    "created": "2020-05-30 00:52:23.743",
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "emr": "IQCare",
+    "project": "",
+    "voided": false,
+    "processed": false,
+    "id": "3EC12AF3-16BD-486D-B7BF-5E7873BBAD19",
+    "code": 12693,
+    "name": "Nziu Health Centre",
+    "created": "2020-05-30 00:52:23.743",
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  }
+]
