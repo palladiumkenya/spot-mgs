@@ -1,0 +1,15 @@
+{
+  "name": "spot-mgs",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace @spot-mgs/client start",
+    "server": "yarn workspace @spot-mgs/server start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
