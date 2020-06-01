@@ -1,12 +1,18 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Logger, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
+    @Get()
+    getHello(): string {
+        return '@spot-mgs running [v01JUN200120]...';
+    }
+
+    @Get('migration')
+    getLib(@Res() res): string {
+        Logger.log(__dirname + '/wwwroot/spot-mgs-client.js');
+        return res.sendFile(__dirname + '/wwwroot/spot-mgs-client.js');
+    }
 }

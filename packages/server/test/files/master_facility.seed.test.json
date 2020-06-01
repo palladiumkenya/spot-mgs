@@ -1,0 +1,47 @@
+[
+  {
+    "code": 12680,
+    "name": "Aberdare Medical & Surgical Clinic",
+    "county": "NYERI",
+    "facilityId": null,
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "code": 12690,
+    "name": "MGS Health Centre",
+    "county": "KIRINYAGA",
+    "facilityId": null,
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "code": 12691,
+    "name": "Afya Link Ngurubani Clinic",
+    "county": "KIRINYAGA",
+    "facilityId": null,
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "code": 12692,
+    "name": "Leo Link Ngurubani Clinic",
+    "county": "KIRINYAGA",
+    "facilityId": null,
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  },
+  {
+    "code": 12693,
+    "name": "Nziu Clinic",
+    "county": "MAKUENI",
+    "facilityId": null,
+    "snapshotDate": null,
+    "snapshotSiteCode": null,
+    "snapshotVersion": null
+  }
+]
