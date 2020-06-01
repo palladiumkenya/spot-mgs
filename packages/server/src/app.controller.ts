@@ -12,7 +12,7 @@ export class AppController {
 
     @Get('migration')
     getLib(@Res() res): string {
-        Logger.log(__dirname + '/wwwroot/spot-mgs-client.js');
-        return res.sendFile(__dirname + '/wwwroot/spot-mgs-client.js');
+        Logger.log(__dirname + '/wwwroot/mgs.js');
+        return res.sendFile(__dirname + '/wwwroot/mgs.js');
     }
 }
