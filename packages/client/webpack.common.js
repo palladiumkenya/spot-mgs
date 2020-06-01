@@ -2,20 +2,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 const APP_PATH = path.resolve(__dirname, "src");
-const WWW_PATH = path.resolve(__dirname, "public");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: {
-    main: path.join(APP_PATH, "index.js"),
-  },
-  output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
-  },
-
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    extensions: [".ts", ".tsx", ".jsx", ".js", ".json"],
   },
 
   module: {
@@ -47,14 +38,5 @@ module.exports = {
   },
   devtool: "source-map",
   externals: [],
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(WWW_PATH, "index.html"),
-      favicon: path.join(WWW_PATH, "favicon.ico"),
-    }),
-    new webpack.DefinePlugin({
-      SERVICE_HOST: JSON.stringify("localhost"),
-    }),
-    new CleanWebpackPlugin(),
-  ],
+  plugins: [new CleanWebpackPlugin()],
 };
