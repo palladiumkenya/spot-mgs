@@ -7,15 +7,15 @@ import {
   Route,
   Link,
   Switch,
-  HashRouter,
+  HashRouter
 } from "react-router-dom";
 
-const Migration = (props) => {
-  const url = `https://${window.location.hostname}:4730/api/v1/stats/migration`;
+const Migration = props => {
+  const url = `https://${window.location.hostname}:4703/api/v1/stats/migration`;
 
   const [stats, setStats] = useState({
     isLoading: true,
-    mgsInfo: {},
+    mgsInfo: {}
   });
   useEffect(() => {
     loadStats();
@@ -27,12 +27,12 @@ const Migration = (props) => {
       let data = response.data;
       setStats({
         isLoading: false,
-        mgsInfo: data,
+        mgsInfo: data
       });
     } catch (error) {
       setStats({
         isLoading: false,
-        mgsInfo: {},
+        mgsInfo: {}
       });
       console.error(error);
     }
