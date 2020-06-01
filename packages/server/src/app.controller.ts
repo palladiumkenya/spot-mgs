@@ -7,7 +7,7 @@ export class AppController {
 
     @Get()
     getHello(): string {
-        return '@spot-mgs running [v01JUN200121]...';
+        return 'dwapi MGS v01JUN202001...';
     }
 
     @Get('migration')
