@@ -1,21 +1,19 @@
+import { StatsTileDto } from './stats-tile.dto';
+
 export class StatsDto {
+    tile: StatsTileDto;
     migrated: any;
     nonMigrated: any;
-    totalMigrated: number;
-    totalNonMigrated: number;
-    totalOverall: number;
-    migrationProgress: number;
 
     constructor(nonMigrated: any, migrated: any) {
         this.nonMigrated = nonMigrated;
         this.migrated = migrated;
-        this.analyze();
+        this.updateTile();
     }
 
-    analyze() {
-        this.totalMigrated = this.migrated ? this.migrated.length : 0;
-        this.totalNonMigrated = this.nonMigrated ? this.nonMigrated.length : 0;
-        this.totalOverall = this.totalNonMigrated + this.totalMigrated;
-        this.migrationProgress = (this.totalMigrated / this.totalOverall) * 100;
+    updateTile() {
+        const mgs = this.migrated ? this.migrated.length : 0;
+        const nonMgs = this.nonMigrated ? this.nonMigrated.length : 0;
+        this.tile = new StatsTileDto(mgs, nonMgs);
     }
 }

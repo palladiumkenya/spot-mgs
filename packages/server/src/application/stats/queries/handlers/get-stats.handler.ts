@@ -23,7 +23,7 @@ export class GetStatsHandler implements IQueryHandler<GetStatsQuery, any> {
         const migratedSql =
             'select mf.County,f.*\n' +
             'from Facility f inner join MasterFacility mf on f.SnapshotSiteCode=mf.Code\n' +
-            "where f.Emr='IQCare' and f.SnapshotVersion is not null";
+            "where f.Emr='IQCare' and f.SnapshotVersion is not null order by f.SnapshotDate desc";
 
         const migrated = await this.repository.query(migratedSql);
 

@@ -55,9 +55,9 @@ describe('Get Stats Test', () => {
         const result = await queryBus.execute<GetStatsQuery, StatsDto>(query);
         expect(result.migrated.length).toBeGreaterThan(0);
         expect(result.nonMigrated.length).toBeGreaterThan(0);
-        expect(result.totalNonMigrated).toBeGreaterThan(0);
-        expect(result.totalMigrated).toBeGreaterThan(0);
-        expect(result.migrationProgress).toBeGreaterThan(0);
+        expect(result.tile.totalNonMigrated).toBeGreaterThan(0);
+        expect(result.tile.totalMigrated).toBeGreaterThan(0);
+        expect(result.tile.migrationProgress).toBeGreaterThan(0);
         Logger.debug(result);
     });
 });

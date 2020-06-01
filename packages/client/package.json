@@ -6,15 +6,32 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "primeflex": "^1.1.1",
+    "primeicons": "^4.0.0-rc.2",
+    "primereact": "^4.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-moment": "^0.9.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-timeago": "^4.4.0",
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server",
+    "start:app": "webpack-dev-server --config webpack.config.app.js",
+    "build": "webpack --progress --colors --mode=production",
+    "test": "cross-env BABEL_ENV=test jest",
+    "eject": "react-scripts eject",
+    "analyze": "webpack --mode=production --env.analyze=true",
+    "lint": "eslint src --ext js",
+    "format": "prettier --write './**'",
+    "watch-tests": "cross-env BABEL_ENV=test jest --watch",
+    "coverage": "cross-env BABEL_ENV=test jest --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +47,52 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && concurrently yarn:test yarn:lint"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/runtime": "^7.8.7",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^9.4.0",
+    "@types/jest": "^25.2.1",
+    "@types/systemjs": "^6.1.0",
+    "babel-eslint": "^11.0.0-beta.2",
+    "babel-jest": "^24.9.0",
+    "concurrently": "^5.0.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react-important-stuff": "^2.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^3.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.7",
+    "jest-cli": "^25.2.7",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^2.0.4",
+    "pretty-quick": "^2.0.1",
+    "sass-loader": "^8.0.2",
+    "single-spa-react": "^2.14.0",
+    "source-map-loader": "^1.0.0",
+    "style-loader": "^1.2.1",
+    "systemjs-webpack-interop": "^1.1.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-config-single-spa-react": "^1.0.3",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }

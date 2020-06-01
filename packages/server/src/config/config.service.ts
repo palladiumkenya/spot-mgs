@@ -11,6 +11,13 @@ export class ConfigService {
     private readonly envConfig: EnvConfig;
 
     constructor(filePath: string) {
+        if (!filePath) {
+            filePath = 'development.env';
+        }
+        if (filePath === 'undefined.env') {
+            filePath = 'development.env';
+        }
+        if (filePath) console.log('XXXXXX', filePath);
         const config = dotenv.parse(fs.readFileSync(filePath));
         this.envConfig = this.validateInput(config);
         Logger.log(`running in ${filePath}`);
@@ -34,6 +41,8 @@ export class ConfigService {
             SPOTMGS_DB_NAME: Joi.string().default('DwapiCentral'),
             SPOTMGS_ENTITIES: Joi.string().default('dist/**/*.entity{.ts,.js}'),
             SPOTMGS_DB_SYNC: Joi.boolean().default(true),
+            SPOTMGS_KEY: Joi.string().default('koskedk.com+5-key.pem'),
+            SPOTMGS_CERT: Joi.string().default('koskedk.com+5.pem'),
         });
 
         const { error, value: validatedEnvConfig } = envVarsSchema.validate(
@@ -75,5 +84,12 @@ export class ConfigService {
 
     get DatabaseEntities(): string {
         return String(this.envConfig.SPOTMGS_ENTITIES);
+    }
+
+    get SslKey(): string {
+        return String(this.envConfig.SPOTMGS_KEY);
+    }
+    get SslCert(): string {
+        return String(this.envConfig.SPOTMGS_CERT);
     }
 }

@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
 import { GetStatsQuery } from '../queries/get-stats-query';
 
-@Controller('stats')
+@Controller('migration')
 export class StatsController {
     constructor(private readonly queryBus: QueryBus) {}
 
